@@ -1,5 +1,6 @@
 package com.example.proiectcmo
 
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
@@ -42,5 +43,26 @@ fun ButonText (descriere: String, functie: () -> Unit) {
     Button (
         onClick = functie,
         content = {Text(descriere)}
+    )
+}
+
+@Composable
+@OptIn(ExperimentalMaterial3Api::class)
+fun EditorMultilinie
+(
+    modifier: Modifier = Modifier,
+    valoareData: MutableState<String>,
+) {
+    TextField (
+        value = valoareData.value,
+        label = {Text("Continut text")},
+        singleLine = false,
+        maxLines = 15,
+        onValueChange = {
+                textIntrodus: String ->
+            valoareData.value = textIntrodus
+        },
+
+        modifier = modifier
     )
 }

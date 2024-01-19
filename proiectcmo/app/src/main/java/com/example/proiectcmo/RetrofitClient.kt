@@ -12,10 +12,10 @@ interface ApiService {
     fun getNotitaById(@Path("id") notitaId: Int): Call<Notita?>
 
     @GET("toate")
-    fun getNotite(): Call<List<Notita>>
+    fun getNotite(): Call<List<Notita>?>
 
     @GET("toate")
-    fun getNotiteByAutor(@Path("autor") autor: String): Call<List<Notita>>
+    fun getNotiteByAutor(@Path("autor") autor: String): Call<List<Notita>?>
 
     @POST("publica")
     fun postNotita(notita: Notita)

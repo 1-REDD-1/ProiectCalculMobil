@@ -2,4 +2,6 @@
     <string name="app_name">Proiect CMO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_editare_notite">EditareNotite</string>
+    <string name="title_activity_selectare_notita">SelectareNotita</string>
 </resources>
